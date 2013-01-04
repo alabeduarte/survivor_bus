@@ -1,4 +1,8 @@
 SurvivorBus::Application.routes.draw do
+  get "survivor/index"
+  
+  root :to => 'survivor#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
