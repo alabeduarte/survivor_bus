@@ -1,13 +1,14 @@
 SurvivorBus::Application.routes.draw do
+  get "bus_service/show"
   get "survivor/index"
-  
+
   root :to => 'survivor#index'
+  match 'bus_service/show/:id' => 'bus_service#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
